@@ -1,0 +1,67 @@
+<p-table [value]="heroes">
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="{{ col }}" *ngFor="let col of cols">
+        {{ col | titlecase }} <p-sortIcon field="{{ col }}"></p-sortIcon>
+      </th>
+      <th>Action</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-heroes>
+    <tr>
+      <td *ngFor="let col of cols">{{ heroes[col] }}</td>
+      <td><i class="pi pi-trash" (click)="deleteHero(heroes)"></i></td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dialog
+  header="Create a new Hero"
+  [(visible)]="visible"
+  [modal]="true"
+  [responsive]="true"
+>
+  <div class="ui-g" [formGroup]="form">
+    <div class="ui-lg-12 ui-md-12 ui-g-12 formDiv">
+      <label>Name</label>
+      <input
+        type="text"
+        name="name"
+        pInputText
+        id="name"
+        formControlName="name"
+      />
+    </div>
+    <div class="ui-lg-12 ui-md-12 ui-g-12 formDiv">
+      <label>Surname</label>
+      <input
+        type="text"
+        pInputText
+        name="surname"
+        id="surname"
+        formControlName="surname"
+      />
+    </div>
+    <div class="ui-lg-12 ui-md-12 ui-g-12 formDiv">
+      <label>NickName</label>
+      <input
+        type="text"
+        pInputText
+        name="nickName"
+        id="nickName"
+        formControlName="nickname"
+      />
+    </div>
+  </div>
+
+  <p-footer>
+    <button type="button" pButton (click)="createHero()" label="Ekle"></button>
+  </p-footer>
+</p-dialog>
+<button
+  type="button"
+  style="float: right"
+  pButton
+  (click)="createDialog()"
+  label="Ekle"
+></button>

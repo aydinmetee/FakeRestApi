@@ -1,0 +1,40 @@
+{
+  "heroes": [
+    {
+      "id": 2,
+      "name": "Tony",
+      "surname": "Stark",
+      "nickname": "Ironman"
+    },
+    {
+      "id": 3,
+      "name": "Bruce",
+      "surname": "Banner",
+      "nickname": "Hulk"
+    },
+    {
+      "id": 4,
+      "name": "Peter",
+      "surname": "Parker",
+      "nickname": "Spiderman"
+    },
+    {
+      "id": 5,
+      "name": "Natasha",
+      "surname": "Romanov",
+      "nickname": "Black Widow"
+    },
+    {
+      "name": "Steve",
+      "surname": "Rogers",
+      "nickname": "Captain America",
+      "id": 6
+    },
+    {
+      "name": "Clark",
+      "surname": "Kent",
+      "nickname": "Superman",
+      "id": 1
+    }
+  ]
+}
